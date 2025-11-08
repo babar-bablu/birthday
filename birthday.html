@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Ayesha 🎉</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="birthday.css">
+</head>
+<body>
+    <!-- Background animation -->
+    <div class="background-animation">
+        <div class="stars"></div>
+        <div class="floating-hearts"></div>
+    </div>
+
+    <!-- Main container -->
+    <div class="container">
+        <!-- Locked state -->
+        <div id="lockedState" class="state-wrapper active">
+            <div class="envelope-wrapper">
+                <div class="envelope">
+                    <div class="envelope-flap"></div>
+                    <div class="envelope-body">
+                        <div class="envelope-front">
+                            <p class="to-text">To: Ayesha</p>
+                            <p class="from-text">From: Champion ❤️</p>
+                        </div>
+                    </div>
+                    <div class="lock-icon">🔒</div>
+                </div>
+            </div>
+
+            <div class="password-section">
+                <h1 class="title">🎂 Happy Birthday Ayesha! 🎂</h1>
+                <p class="subtitle">Enter the password to unlock your special message</p>
+                
+                <form id="passwordForm" class="password-form">
+                    <div class="input-wrapper">
+                        <input 
+                            type="password" 
+                            id="passwordInput" 
+                            placeholder="Enter password..." 
+                            class="password-input"
+                            autocomplete="off"
+                        >
+                        <button type="button" id="togglePassword" class="toggle-btn">👁️</button>
+                    </div>
+                    <button type="submit" class="submit-btn">Unlock Message</button>
+                </form>
+
+                <p id="errorMessage" class="error-message"></p>
+            </div>
+        </div>
+
+        <!-- Unlocked state -->
+        <div id="unlockedState" class="state-wrapper">
+            <div class="message-container">
+                <button id="closeBtn" class="close-btn">✕</button>
+                
+                <div class="message-header">
+                    <h1 class="message-title">🎉 Happy Birthday Ayesha! 🎉</h1>
+                </div>
+
+                <div class="message-content">
+                    <p class="message-text">
+                        Dear Ayesha,
+                    </p>
+                    <p class="message-text">
+                        On this special day, I want you to know how much you mean to me. 
+                        Your smile brightens every room, and your kindness touches every heart.
+                    </p>
+                    <p class="message-text">
+                        May this year bring you endless joy, beautiful moments, and all the happiness 
+                        you deserve. You deserve the world and more.
+                    </p>
+                    <p class="message-text">
+                        Wishing you a day filled with love, laughter, and unforgettable memories.
+                    </p>
+                    <p class="message-text signature">
+                        With all my love,<br>
+                        <span class="from-name">Your Champion ❤️</span>
+                    </p>
+                </div>
+
+                <div class="confetti-container" id="confettiContainer"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio elements -->
+    <audio id="unlockSound" preload="auto">
+        <source src="data:audio/wav;base64,UklGRiYAAABXQVZFZm10IBAAAAABAAEAQB8AAAB9AAACABAAZGF0YQIAAAAAAA==" type="audio/wav">
+    </audio>
+
+    <script src="birthday.js"></script>
+</body>
+</html>
